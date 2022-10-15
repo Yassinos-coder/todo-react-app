@@ -1,0 +1,78 @@
+.Todo {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: bisque;
+  margin: auto;
+  width: 50%;
+  height: 540px;
+  color: black;
+  max-width: 610px;
+}
+
+.title {
+  text-align: center;
+}
+
+.input-todos {
+  margin: auto;
+  width: 100%;
+  height: 25px;
+  outline-color: aqua;
+  border: none;
+}
+
+.input-todos input {
+  margin-left: 17%;
+  width: 52.5%;
+  height: 33px;
+  outline-color: aqua;
+  border: none;
+}
+
+.input-todos button {
+  width: 70px;
+  height: 35px;
+  color: black;
+  background-color: white;
+  border: none;
+  outline-color: aqua;
+}
+
+.todo-list {
+  width: 65%;
+  height: 361px;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.text-todo {
+  text-align: center;
+  font-size: 20px;
+}
+
+.text-todo button {
+  margin-left: 7px;
+  width: 35px;
+  height: 20px;
+  border-radius: 12px;
+  color: black;
+  background-color: white;
+  border: none;
+  outline-color: aqua;
+}
+
+.Search-bar {
+  padding-bottom: 15px;
+}
+
+.Search-bar input {
+  margin-left: 17%;
+  width: 65%;
+  height: 33px;
+  outline-color: aqua;
+  border: none;
+}
+
+.checkedStyle {
+  text-decoration: line-through;
+}
