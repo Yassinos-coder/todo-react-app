@@ -16,8 +16,8 @@ const Todo = () => {
         }
         
     ])
-    const prevTodos = todos
-    console.log(prevTodos)
+    const [ todos_unsearched, setustodos] = useState(todos)
+    console.log(todos_unsearched)
     // Get input function
     let todoInput = React.createRef();
     let todosearch = React.createRef();
@@ -26,22 +26,29 @@ const Todo = () => {
             ...todos, {task: todoInput.current.value, isDone: false} 
         ])
         todoInput.current.value =""
+        setustodos([
+            ...todos, {task: todoInput.current.value, isDone: false} 
+        ])
     };
 
     // Delete Task From Todos list
     const DeleteTask = (btn) => {
         setTodos([...todos.filter((element) => element.task !== btn)])
+        setustodos([...todos.filter((element) => element.task !== btn)])
     }
 
     //Search todos
-    const search =() => {
+    const search = () => 
+    {    
         if (todosearch.current.value === '') {
             console.log('SearchBar.is Empty = true')
-            setTodos([...todos, prevTodos])
+            console.log(todos_unsearched)
+            setTodos(todos_unsearched)
         } else {
             setTodos([...todos.filter((element) => element.task.includes(todosearch.current.value))]) 
-       }
+        }
     }
+    
 
     // Check Box
     const Checked = (e) => {
@@ -58,7 +65,7 @@ const Todo = () => {
         </div>
 
         <div className="Search-bar">
-            <input ref={todosearch} onChange={ ()=> search() } type="text" placeholder='Type in to search.....' />
+            <input ref={todosearch} onChange={ () => search() } type="text" placeholder='Type in to search.....' />
         </div>
 
         <div className="input-todos">
